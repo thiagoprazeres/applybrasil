@@ -13,17 +13,27 @@ const prefersReducedMotion = window.matchMedia(
 if (!prefersReducedMotion) {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Optimize ScrollTrigger performance
+  ScrollTrigger.config({
+    limitCallbacks: true,
+    ignoreMobileResize: true,
+    autoRefreshEvents: "DOMContentLoaded,load,resize",
+  });
+
   const animateEl = (el: Element) => {
     const mode = (el as HTMLElement).dataset.animate ?? "fade-up";
 
     const base: gsap.TweenVars = {
-      duration: 0.8,
+      duration: 0.6, // Reduced duration for better performance
       ease: "power2.out",
       clearProps: "transform,opacity",
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
         toggleActions: "play none none none",
+        // Performance optimizations
+        once: true,
+        scrub: false,
       },
     };
 
@@ -48,6 +58,7 @@ if (!prefersReducedMotion) {
     );
   };
 
+  // Batch DOM queries and animations
   document.querySelectorAll("[data-animate]").forEach(animateEl);
 
   document.querySelectorAll("[data-animate-group]").forEach((group) => {
@@ -60,16 +71,23 @@ if (!prefersReducedMotion) {
       {
         opacity: 1,
         y: 0,
-        duration: 0.7,
+        duration: 0.5, // Reduced duration
         ease: "power2.out",
-        stagger: 0.08,
+        stagger: 0.06, // Reduced stagger for better performance
         clearProps: "transform,opacity",
         scrollTrigger: {
           trigger: group,
           start: "top 85%",
           toggleActions: "play none none none",
+          once: true,
+          scrub: false,
         },
       },
     );
+  });
+
+  // Cleanup on page unload
+  window.addEventListener("beforeunload", () => {
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   });
 }

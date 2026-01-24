@@ -7,18 +7,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800&display=swap"
+      />
+    </noscript>
     <meta
       name="description"
-      content="Agência de marketing digital com IA para impulsionar suas vendas"
+      content="Agência de marketing digital com IA para impulsionar suas vendas. Tráfego pago, automações com inteligência artificial e cibersegurança para empresas que buscam crescimento previsível e escalável."
     />
-    <title>Apply Brasil</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://applybrasil.com.br/" />
+    <meta property="og:title" content="Apply Brasil - Marketing Digital com IA" />
+    <meta property="og:description" content="Agência de marketing digital com IA para impulsionar suas vendas. Tráfego pago, automações com inteligência artificial e cibersegurança." />
+    <meta property="og:image" content="https://applybrasil.com.br/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://applybrasil.com.br/" />
+    <meta property="twitter:title" content="Apply Brasil - Marketing Digital com IA" />
+    <meta property="twitter:description" content="Agência de marketing digital com IA para impulsionar suas vendas. Tráfego pago, automações com inteligência artificial e cibersegurança." />
+    <meta property="twitter:image" content="https://applybrasil.com.br/og-image.jpg" />
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Apply Brasil" />
+    <meta name="keywords" content="marketing digital, tráfego pago, google ads, meta ads, inteligência artificial, automação, cibersegurança, agência digital" />
+    <link rel="canonical" href="https://applybrasil.com.br/" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Apply Brasil",
+      "url": "https://applybrasil.com.br",
+      "logo": "https://applybrasil.com.br/apllybrasil.svg",
+      "description": "Agência de marketing digital com IA especializada em tráfego pago, automações e cibersegurança",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+5581984393531",
+        "contactType": "customer service",
+        "availableLanguage": "Portuguese"
+      },
+      "sameAs": [
+        "https://www.instagram.com/applybrasil/"
+      ]
+    }
+    </script>
+    
+    <title>Apply Brasil - Marketing Digital com IA | Tráfego Pago & Automação</title>
   </head>
   <body>
     <div class="min-h-dvh">
@@ -33,9 +98,11 @@
             >
               <img
                 src="/apllybrasil.svg"
-                alt="Apply Brasil"
+                alt="Apply Brasil - Logo da agência de marketing digital"
                 width="24"
                 height="24"
+                loading="eager"
+                decoding="async"
               />
               <h1>Apply Brasil</h1>
             </a>
@@ -274,7 +341,7 @@
             <article data-animate-item>
               <img
                 src="/servicos/trafego-pago.webp"
-                alt="Ícone: Tráfego pago"
+                alt="Ícone de gestão de tráfego pago - Meta Ads e Google Ads"
                 class="h-24 w-24"
                 loading="lazy"
                 decoding="async"
@@ -290,7 +357,7 @@
             <article data-animate-item>
               <img
                 src="/servicos/marketing-ia.webp"
-                alt="Ícone: Automação com IA"
+                alt="Ícone de automação com inteligência artificial - WhatsApp e chatbots"
                 class="h-24 w-24"
                 loading="lazy"
                 decoding="async"
@@ -308,7 +375,7 @@
             <article data-animate-item>
               <img
                 src="/servicos/ciberseguranca.webp"
-                alt="Ícone: Cibersegurança"
+                alt="Ícone de cibersegurança - Proteção de dados e sistemas"
                 class="h-24 w-24"
                 loading="lazy"
                 decoding="async"
@@ -349,9 +416,11 @@
             </div>
             <div>
               <img
-                src="gilbert-applybrasil-office.png"
-                alt="Gilbeto Santana"
+                src="/gilbert-applybrasil-office.png"
+                alt="Escritório da Apply Brasil - Ambiente de trabalho da agência"
                 class="rounded-xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -390,7 +459,7 @@
                     >
                       <img
                         src="/depoimentos/marcio_papa_.jpg"
-                        alt="Bidu Técnica"
+                        alt="Foto de perfil de Márcio Papa - Equipe Mansão da Matuta"
                         loading="lazy"
                         decoding="async"
                       />
@@ -430,7 +499,7 @@
                     <div class="w-10 rounded-full">
                       <img
                         src="/depoimentos/bidutecnica.jpg"
-                        alt="Bidu Técnica"
+                        alt="Foto de perfil da Bidu Técnica - Especialista em manutenção de videogames"
                         loading="lazy"
                         decoding="async"
                       />
@@ -497,8 +566,8 @@
             <div class="space-y-3">
               <div class="flex items-center gap-2 font-semibold">
                 <svg
-                  width="20"
-                  height="20"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   class="text-primary"

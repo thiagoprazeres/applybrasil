@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://applybrasil.com.br/sitemap.xml
+
+# Block common non-content paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*utm_source=
+
+# Allow important assets
+Allow: /src/
+Allow: /dist/
+Allow: /servicos/
+Allow: /depoimentos/
