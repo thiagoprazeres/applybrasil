@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: false;
+  exclude: properties;
 }
 
 @layer base {
