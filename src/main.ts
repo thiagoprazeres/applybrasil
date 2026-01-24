@@ -1,112 +1,61 @@
 import "./style.css";
+import { initAnimations, cleanupAnimations, reinitAnimations } from "./gsap-animations";
 
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+// Initialize animations when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  initAnimations();
+});
 
-// Use requestAnimationFrame for DOM updates
-const raf = requestAnimationFrame;
+// Handle page visibility changes
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    cleanupAnimations();
+  } else {
+    reinitAnimations();
+  }
+});
+
+// Handle dynamic content (for SPA scenarios)
+const observer = new MutationObserver((mutations) => {
+  let shouldReinit = false;
+  
+  mutations.forEach((mutation) => {
+    if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+      // Check if any added nodes have animation attributes
+      mutation.addedNodes.forEach((node) => {
+        if (node.nodeType === 1) { // Element node
+          const element = node as Element;
+          if (element.hasAttribute('data-animate') || 
+              element.hasAttribute('data-animate-group') ||
+              element.querySelector('[data-animate], [data-animate-group]')) {
+            shouldReinit = true;
+          }
+        }
+      });
+    }
+  });
+  
+  if (shouldReinit) {
+    reinitAnimations();
+  }
+});
+
+// Start observing the entire document
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
 
 // Set year without causing reflow
 const yearEl = document.getElementById("year");
 if (yearEl) {
-  raf(() => {
+  requestAnimationFrame(() => {
     yearEl.textContent = String(new Date().getFullYear());
   });
 }
 
-const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)",
-).matches;
+// Cleanup on page unload
+window.addEventListener("beforeunload", cleanupAnimations);
 
-// Batch DOM reads and writes to avoid forced reflows
-if (!prefersReducedMotion) {
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Optimize ScrollTrigger performance
-  ScrollTrigger.config({
-    limitCallbacks: true,
-    ignoreMobileResize: true,
-    autoRefreshEvents: "DOMContentLoaded,load,resize",
-  });
-
-  // Cache elements to avoid repeated DOM queries
-  const animatedElements = document.querySelectorAll("[data-animate]");
-  const animatedGroups = document.querySelectorAll("[data-animate-group]");
-
-  // Process animations in batches to avoid layout thrashing
-  raf(() => {
-    // Batch read operations
-    const elementsToAnimate = Array.from(animatedElements);
-    const groupsToProcess = Array.from(animatedGroups).map(group => ({
-      group,
-      items: Array.from(group.querySelectorAll("[data-animate-item]"))
-    })).filter(({ items }) => items.length > 0);
-
-    // Batch write operations
-    elementsToAnimate.forEach((el) => {
-      const mode = (el as HTMLElement).dataset.animate ?? "fade-up";
-
-      const base: gsap.TweenVars = {
-        duration: 0.6,
-        ease: "power2.out",
-        clearProps: "transform,opacity",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-          toggleActions: "play none none none",
-          once: true,
-          scrub: false,
-        },
-      };
-
-      if (mode === "fade") {
-        gsap.fromTo(el, { opacity: 0 }, { opacity: 1, ...base });
-        return;
-      }
-
-      if (mode === "scale") {
-        gsap.fromTo(
-          el,
-          { opacity: 0, scale: 0.96 },
-          { opacity: 1, scale: 1, ...base },
-        );
-        return;
-      }
-
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 18 },
-        { opacity: 1, y: 0, ...base },
-      );
-    });
-
-    groupsToProcess.forEach(({ items }) => {
-      gsap.fromTo(
-        items,
-        { opacity: 0, y: 14 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          ease: "power2.out",
-          stagger: 0.06,
-          clearProps: "transform,opacity",
-          scrollTrigger: {
-            trigger: items[0].parentElement,
-            start: "top 85%",
-            toggleActions: "play none none none",
-            once: true,
-            scrub: false,
-          },
-        },
-      );
-    });
-  });
-
-  // Cleanup on page unload
-  window.addEventListener("beforeunload", () => {
-    raf(() => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    });
-  });
-}
+// Export for potential external use
+export { initAnimations, cleanupAnimations, reinitAnimations };
