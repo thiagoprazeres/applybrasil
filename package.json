@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@netlify/vite-plugin": "^2.7.20",
     "daisyui": "^5.5.14",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
