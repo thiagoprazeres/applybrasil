@@ -4,30 +4,6 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/apllybrasil.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      />
-    </noscript>
-    <link
-      rel="preload"
-      fetchpriority="high"
-      as="image"
-      href="/assets/gilberto-applybrasil.webp"
-      type="image/webp"
-    />
     <meta
       name="description"
       content="Agência de marketing digital com IA para impulsionar suas vendas. Tráfego pago, automações com inteligência artificial e cibersegurança para empresas que buscam crescimento previsível e escalável."
@@ -103,6 +79,48 @@
     <title>
       Apply Brasil - Marketing Digital com IA | Tráfego Pago & Automação
     </title>
+    <style>
+      @import "tailwindcss";
+      @plugin "daisyui" {
+        themes: false;
+        exclude: properties;
+      }
+
+      @plugin "daisyui/theme" {
+        name: "applybrasil";
+        default: true;
+        prefersdark: true;
+        color-scheme: "dark";
+        --color-base-100: #040609;
+        --color-base-200: #0b0e12;
+        --color-base-300: #12161b;
+        --color-base-content: #f8f9fa;
+        --color-primary: oklch(77.48% 0.204 60.62);
+        --color-primary-content: oklch(19.693% 0.004 196.779);
+        --color-secondary: oklch(45.98% 0.248 305.03);
+        --color-secondary-content: oklch(89.196% 0.049 305.03);
+        --color-accent: oklch(64.8% 0.223 136.073);
+        --color-accent-content: oklch(0% 0 0);
+        --color-neutral: oklch(24.371% 0.046 65.681);
+        --color-neutral-content: oklch(84.874% 0.009 65.681);
+        --color-info: oklch(54.615% 0.215 262.88);
+        --color-info-content: oklch(90.923% 0.043 262.88);
+        --color-success: oklch(62.705% 0.169 149.213);
+        --color-success-content: oklch(12.541% 0.033 149.213);
+        --color-warning: oklch(66.584% 0.157 58.318);
+        --color-warning-content: oklch(13.316% 0.031 58.318);
+        --color-error: oklch(65.72% 0.199 27.33);
+        --color-error-content: oklch(13.144% 0.039 27.33);
+        --radius-selector: 0.5rem;
+        --radius-field: 0.5rem;
+        --radius-box: 0.25rem;
+        --size-selector: 0.25rem;
+        --size-field: 0.25rem;
+        --border: 1px;
+        --depth: 1;
+        --noise: 0;
+      }
+    </style>
   </head>
   <body>
     <div class="min-h-dvh">
@@ -413,7 +431,7 @@
         <section
           id="sobre"
           class="mx-auto w-full max-w-6xl px-4 pt-14 sm:pt-20"
-           data-animate="fade-up"
+          data-animate="fade-up"
         >
           <div class="grid items-center gap-10 sm:grid-cols-3">
             <div class="space-y-4 sm:col-span-2">

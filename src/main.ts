@@ -1,4 +1,3 @@
-import "./style.css";
 import { initAnimations, cleanupAnimations, reinitAnimations } from "./gsap-animations";
 
 // Initialize animations when DOM is ready
