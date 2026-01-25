@@ -46,14 +46,6 @@ observer.observe(document.body, {
   subtree: true
 });
 
-// Set year without causing reflow
-const yearEl = document.getElementById("year");
-if (yearEl) {
-  requestAnimationFrame(() => {
-    yearEl.textContent = String(new Date().getFullYear());
-  });
-}
-
 // Cleanup on page unload
 window.addEventListener("beforeunload", cleanupAnimations);
 

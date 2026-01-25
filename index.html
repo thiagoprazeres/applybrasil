@@ -10,7 +10,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -18,47 +21,14 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       />
     </noscript>
-    
-    <!-- Critical CSS inline -->
-    <style>
-      body{font-family:Inter,ui-sans-serif,system-ui,sans-serif;margin:0;background:#040609;color:#f8f9fa}
-      .min-h-dvh{min-height:100vh}
-      .mx-auto{margin-left:auto;margin-right:auto}
-      .max-w-6xl{max-width:72rem}
-      .px-4{padding-left:1rem;padding-right:1rem}
-      .pt-12{padding-top:3rem}
-      .grid{display:grid}
-      .gap-10{gap:2.5rem}
-      .lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}
-      .text-4xl{font-size:2.25rem;line-height:2.5rem}
-      .font-bold{font-weight:700}
-      .tracking-tight{letter-spacing:-.025em}
-      .sm\:text-5xl{font-size:3rem;line-height:1}
-      .text-primary{color:#fbbf24}
-      .w-2\/3{width:66.666667%}
-      .sm\:w-full{width:100%}
-      .text-lg{font-size:1.125rem;line-height:1.75rem}
-      .flex{display:flex}
-      .flex-col{flex-direction:column}
-      .gap-3{gap:.75rem}
-      .sm\:flex-row{flex-direction:row}
-      .sm\:items-center{align-items:center}
-      .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:.5rem;padding:.5rem 1rem;font-weight:500;text-decoration:none;transition:all .2s}
-      .btn-primary{background:#fbbf24;color:#040609}
-      .btn-primary:hover{background:#f59e0b}
-      .btn-ghost{background:transparent;color:#f8f9fa;border:1px solid #374151}
-      .btn-ghost:hover{background:#374151}
-      @media (min-width:640px){.sm\:pt-16{padding-top:4rem}}
-    </style>
-    
-    <!-- Non-critical CSS deferred -->
-    <link rel="stylesheet" href="/src/style.css" />
     <link
       rel="preload"
       href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -66,60 +36,88 @@
         href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800&display=swap"
       />
     </noscript>
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/assets/gilberto-applybrasil.webp"
+      type="image/webp"
+    />
     <meta
       name="description"
       content="Agência de marketing digital com IA para impulsionar suas vendas. Tráfego pago, automações com inteligência artificial e cibersegurança para empresas que buscam crescimento previsível e escalável."
     />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://applybrasil.com.br/" />
-    <meta property="og:title" content="Apply Brasil - Marketing Digital com IA" />
-    <meta property="og:description" content="Agência de marketing digital com IA para impulsionar suas vendas. Tráfego pago, automações com inteligência artificial e cibersegurança." />
-    <meta property="og:image" content="https://applybrasil.com/assets/og-image.webp" />
+    <meta
+      property="og:title"
+      content="Apply Brasil - Marketing Digital com IA"
+    />
+    <meta
+      property="og:description"
+      content="Agência de marketing digital com IA para impulsionar suas vendas. Tráfego pago, automações com inteligência artificial e cibersegurança."
+    />
+    <meta
+      property="og:image"
+      content="https://applybrasil.com/assets/og-image.webp"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="pt_BR" />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://applybrasil.com.br/" />
-    <meta property="twitter:title" content="Apply Brasil - Marketing Digital com IA" />
-    <meta property="twitter:description" content="Agência de marketing digital com IA para impulsionar suas vendas. Tráfego pago, automações com inteligência artificial e cibersegurança." />
-    <meta property="twitter:image" content="https://applybrasil.com/assets/og-image.webp" />
-    
+    <meta
+      property="twitter:title"
+      content="Apply Brasil - Marketing Digital com IA"
+    />
+    <meta
+      property="twitter:description"
+      content="Agência de marketing digital com IA para impulsionar suas vendas. Tráfego pago, automações com inteligência artificial e cibersegurança."
+    />
+    <meta
+      property="twitter:image"
+      content="https://applybrasil.com/assets/og-image.webp"
+    />
+
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Apply Brasil" />
-    <meta name="keywords" content="marketing digital, tráfego pago, google ads, meta ads, inteligência artificial, automação, cibersegurança, agência digital" />
+    <meta
+      name="keywords"
+      content="marketing digital, tráfego pago, google ads, meta ads, inteligência artificial, automação, cibersegurança, agência digital"
+    />
     <link rel="canonical" href="https://applybrasil.com.br/" />
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Apply Brasil",
-      "url": "https://applybrasil.com.br",
-      "logo": "https://applybrasil.com/apllybrasil.svg",
-      "description": "Agência de marketing digital com IA especializada em tráfego pago, automações e cibersegurança",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "BR"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+5581984393531",
-        "contactType": "customer service",
-        "availableLanguage": "Portuguese"
-      },
-      "sameAs": [
-        "https://www.instagram.com/applybrasil/"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Apply Brasil",
+        "url": "https://applybrasil.com.br",
+        "logo": "https://applybrasil.com/apllybrasil.svg",
+        "description": "Agência de marketing digital com IA especializada em tráfego pago, automações e cibersegurança",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+5581984393531",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        },
+        "sameAs": ["https://www.instagram.com/applybrasil/"]
+      }
     </script>
-    
-    <title>Apply Brasil - Marketing Digital com IA | Tráfego Pago & Automação</title>
+
+    <title>
+      Apply Brasil - Marketing Digital com IA | Tráfego Pago & Automação
+    </title>
   </head>
   <body>
     <div class="min-h-dvh">
@@ -185,33 +183,31 @@
         </div>
       </header>
 
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0">
         <div
-          aria-hidden="true"
-          class="pointer-events-none absolute inset-0"
-        >
-          <div
-            class="bg-primary/25 absolute -top-28 left-1/2 h-72 w-36 -translate-x-1/2 rounded-full blur-3xl sm:h-96 sm:w-44"
-          ></div>
-          <div
-            class="bg-secondary/20 absolute top-32 -left-24 h-64 w-64 rounded-full blur-3xl sm:top-24 sm:h-80 sm:w-80"
-          ></div>
-          <div
-            class="bg-accent/15 absolute right-0 -bottom-28 h-72 w-72 rounded-full blur-3xl sm:h-96 sm:w-96"
-          ></div>
-          <div
-            class="from-base-200/0 via-base-100/0 to-base-100 absolute inset-0 bg-linear-to-b"
-          ></div>
-          <div
-            class="h-full w-full bg-[url('/assets/gilberto-applybrasil.webp')] bg-auto bg-top bg-no-repeat opacity-30 sm:bg-contain sm:bg-right sm:opacity-100"
-          ></div>
-        </div>
+          class="bg-primary/25 absolute -top-28 left-1/2 h-72 w-36 -translate-x-1/2 rounded-full blur-3xl sm:h-96 sm:w-44"
+        ></div>
+        <div
+          class="bg-secondary/20 absolute top-32 -left-24 h-64 w-64 rounded-full blur-3xl sm:top-24 sm:h-80 sm:w-80"
+        ></div>
+        <div
+          class="bg-accent/15 absolute right-0 -bottom-28 h-72 w-72 rounded-full blur-3xl sm:h-96 sm:w-96"
+        ></div>
+        <div
+          class="from-base-200/0 via-base-100/0 to-base-100 absolute inset-0 bg-linear-to-b"
+        ></div>
+        <div
+          class="h-full w-full bg-[url('/assets/gilberto-applybrasil.webp')] bg-auto bg-top bg-no-repeat opacity-30 sm:bg-contain sm:bg-right sm:opacity-100"
+        ></div>
+      </div>
       <main>
         <section
           id="hero"
           class="relative mx-auto w-full max-w-6xl overflow-hidden px-4 pt-12 sm:pt-16"
+          data-animate="hero-entrance"
         >
           <div class="grid items-center gap-10 md:grid-cols-2">
-            <div class="space-y-6" data-animate-group>
+            <div class="space-y-6">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="badge badge-xs">
                   <svg
@@ -299,25 +295,18 @@
 
               <h1
                 class="text-4xl leading-tight font-bold tracking-tight sm:text-5xl"
-                data-animate-item
               >
                 Cresça com <span class="text-primary">tráfego pago</span>,
                 <span class="text-primary">automações</span> com IA e
                 <span class="text-primary">segurança</span> de ponta
               </h1>
-              <p
-                class="text-base-content/80 w-2/3 sm:w-full sm:text-lg"
-                data-animate-item
-              >
+              <p class="text-base-content/80 w-2/3 sm:w-full sm:text-lg">
                 A Apply Brasil acelera aquisição e conversão com Meta/Google,
                 automações com agentes de IA (chat e ligação) e uma camada de
                 cibersegurança para proteger operação e dados.
               </p>
 
-              <div
-                class="flex flex-col gap-3 sm:flex-row sm:items-center"
-                data-animate-item
-              >
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href="https://api.whatsapp.com/send/?phone=%2B5581984393531&text&type=phone_number&app_absent=0&utm_source=ig"
                   target="_blank"
@@ -326,12 +315,16 @@
                   aria-label="Agendar diagnóstico gratuito via WhatsApp"
                   >Agendar diagnóstico gratuito</a
                 >
-                <a href="#servicos" class="btn btn-ghost" aria-label="Ver nossos serviços de marketing digital">Ver serviços</a>
+                <a
+                  href="#servicos"
+                  class="btn btn-ghost"
+                  aria-label="Ver nossos serviços de marketing digital"
+                  >Ver serviços</a
+                >
               </div>
 
               <div
                 class="stats stats-vertical lg:stats-horizontal border-base-300 bg-base-200/80 sm:bg-base-200/30 w-full border shadow"
-                data-animate-item
               >
                 <div class="stat">
                   <div class="stat-title">Foco</div>
@@ -362,7 +355,8 @@
         </section>
         <section
           id="servicos"
-          class="mx-auto w-full max-w-6xl px-4 pt-14 sm:pt-20 relative"
+          class="relative mx-auto w-full max-w-6xl px-4 pt-14 sm:pt-20"
+          data-animate="scale"
         >
           <div class="space-y-4 text-center">
             <h2 class="text-3xl font-bold tracking-tight">Serviços</h2>
@@ -372,11 +366,8 @@
             </p>
           </div>
 
-          <div
-            class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            data-animate-group
-          >
-            <article data-animate-item>
+          <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article>
               <img
                 src="/servicos/trafego-pago.webp"
                 alt="Ícone de gestão de tráfego pago - Meta Ads e Google Ads"
@@ -394,7 +385,7 @@
               </p>
             </article>
 
-            <article data-animate-item>
+            <article>
               <img
                 src="/servicos/marketing-ia.webp"
                 alt="Ícone de automação com inteligência artificial - WhatsApp e chatbots"
@@ -414,7 +405,7 @@
               </p>
             </article>
 
-            <article data-animate-item>
+            <article>
               <img
                 src="/servicos/ciberseguranca.webp"
                 alt="Ícone de cibersegurança - Proteção de dados e sistemas"
@@ -437,9 +428,10 @@
         <section
           id="sobre"
           class="mx-auto w-full max-w-6xl px-4 pt-14 sm:pt-20"
+           data-animate="fade-up"
         >
           <div class="grid items-center gap-10 sm:grid-cols-3">
-            <div class="space-y-4 sm:col-span-2" data-animate="fade-up">
+            <div class="space-y-4 sm:col-span-2">
               <h2 class="text-3xl font-bold tracking-tight">
                 Sobre a Apply Brasil
               </h2>
@@ -462,7 +454,7 @@
               <img
                 src="/sobre-nos-applybrasil.webp"
                 alt="Escritório da Apply Brasil - Ambiente de trabalho da agência"
-                class="rounded-xl w-full h-auto object-cover"
+                class="h-auto w-full rounded-xl object-cover"
                 loading="lazy"
                 decoding="async"
                 width="400"
@@ -475,10 +467,12 @@
         <section
           id="ciberseguranca"
           class="mx-auto w-full max-w-6xl px-4 pt-14 sm:pt-20"
-          data-animate="fade-up"
+          data-animate="scale"
         >
           <div class="space-y-4 text-center">
-            <h2 class="text-3xl font-bold tracking-tight">Soluções de IA Avançada</h2>
+            <h2 class="text-3xl font-bold tracking-tight">
+              Soluções de IA Avançada
+            </h2>
             <p class="text-base-content/80">
               Transforme sua operação com inteligência artificial de ponta
             </p>
@@ -486,40 +480,75 @@
 
           <div class="mt-8 grid gap-8 md:grid-cols-2">
             <!-- Cognando -->
-            <div class="card border-base-200 bg-linear-to-br from-primary/5 to-base-100 border shadow-lg">
+            <div
+              class="card border-base-200 from-primary/5 to-base-100 border bg-linear-to-br shadow-lg"
+              data-animate-3d="card"
+            >
               <div class="card-body">
-                <div class="flex items-center gap-3 mb-4">
+                <div class="mb-4 flex items-center gap-3">
                   <div class="badge badge-primary">Agente de Voz</div>
                   <h3 class="card-title text-xl">Cognando</h3>
                 </div>
-                
+
                 <div class="space-y-4">
                   <div>
-                    <h4 class="font-semibold text-primary mb-2">O que é:</h4>
+                    <h4 class="text-primary mb-2 font-semibold">O que é:</h4>
                     <p class="text-base-content/80">
-                      A evolução da URA. O Cognando é uma IA exclusiva para voz que usa NLU (Natural Language Understanding) para dialogar, executar tarefas complexas e responder qualquer tipo de solicitação, como um agente humano.
+                      A evolução da URA. O Cognando é uma IA exclusiva para voz
+                      que usa NLU (Natural Language Understanding) para
+                      dialogar, executar tarefas complexas e responder qualquer
+                      tipo de solicitação, como um agente humano.
                     </p>
                   </div>
 
                   <div>
-                    <h4 class="font-semibold text-primary mb-2">Diferenciais:</h4>
+                    <h4 class="text-primary mb-2 font-semibold">
+                      Diferenciais:
+                    </h4>
                     <ul class="text-base-content/80 space-y-1">
-                      <li>• Autoaprendizado contínuo, evoluindo com as experiências vividas</li>
-                      <li>• Personalidade adaptável (perfil) e regionalização da linguagem</li>
-                      <li>• Sotaques e termos locais para máxima conexão com o cliente</li>
+                      <li>
+                        • Autoaprendizado contínuo, evoluindo com as
+                        experiências vividas
+                      </li>
+                      <li>
+                        • Personalidade adaptável (perfil) e regionalização da
+                        linguagem
+                      </li>
+                      <li>
+                        • Sotaques e termos locais para máxima conexão com o
+                        cliente
+                      </li>
                     </ul>
                   </div>
 
                   <div class="alert">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-bulb">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                      <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"/>
-                      <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"/>
-                      <path d="M9.7 17l4.6 0"/>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-bulb"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"
+                      />
+                      <path
+                        d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
+                      />
+                      <path d="M9.7 17l4.6 0" />
                     </svg>
                     <div>
                       <h5 class="font-semibold">Substitua a frustração</h5>
-                      <p class="text-sm">Troque "Digite 1, Digite 2" por uma conversa fluida e resolutiva 24/7 com custo drasticamente menor.</p>
+                      <p class="text-sm">
+                        Troque "Digite 1, Digite 2" por uma conversa fluida e
+                        resolutiva 24/7 com custo drasticamente menor.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -527,40 +556,74 @@
             </div>
 
             <!-- Chista -->
-            <div class="card border-base-200 bg-linear-to-br from-secondary/5 to-base-100 border shadow-lg">
+            <div
+              class="card border-base-200 from-secondary/5 to-base-100 border bg-linear-to-br shadow-lg"
+              data-animate-3d="card"
+            >
               <div class="card-body">
-                <div class="flex items-center gap-3 mb-4">
+                <div class="mb-4 flex items-center gap-3">
                   <div class="badge badge-secondary">Análise IA</div>
                   <h3 class="card-title text-xl">Chista</h3>
                 </div>
-                
+
                 <div class="space-y-4">
                   <div>
-                    <h4 class="font-semibold text-secondary mb-2">O que é:</h4>
+                    <h4 class="text-secondary mb-2 font-semibold">O que é:</h4>
                     <p class="text-base-content/80">
-                      A plataforma que transforma "dados" em "ação". Usa Machine Learning para analisar 100% das interações de voz e texto, indo além da análise fria para sugerir ativamente mudanças e treinamentos.
+                      A plataforma que transforma "dados" em "ação". Usa Machine
+                      Learning para analisar 100% das interações de voz e texto,
+                      indo além da análise fria para sugerir ativamente mudanças
+                      e treinamentos.
                     </p>
                   </div>
 
                   <div>
-                    <h4 class="font-semibold text-secondary mb-2">Gestão Ativa:</h4>
+                    <h4 class="text-secondary mb-2 font-semibold">
+                      Gestão Ativa:
+                    </h4>
                     <ul class="text-base-content/80 space-y-1">
-                      <li>• <strong>Chat Interativo (IA):</strong> Converse com seus dados</li>
-                      <li>• <strong>Relatórios Completos:</strong> Dashboards individuais e gerais</li>
-                      <li>• <strong>Análise Profunda:</strong> Resumo de conversas e pontos críticos</li>
-                      <li>• <strong>Automação:</strong> Metas e alertas automáticos</li>
+                      <li>
+                        • <strong>Chat Interativo (IA):</strong> Converse com
+                        seus dados
+                      </li>
+                      <li>
+                        • <strong>Relatórios Completos:</strong> Dashboards
+                        individuais e gerais
+                      </li>
+                      <li>
+                        • <strong>Análise Profunda:</strong> Resumo de conversas
+                        e pontos críticos
+                      </li>
+                      <li>
+                        • <strong>Automação:</strong> Metas e alertas
+                        automáticos
+                      </li>
                     </ul>
                   </div>
 
                   <div class="alert">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chart-line">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                      <path d="M4 19l16 0"/>
-                      <path d="M4 15l4 -6l4 2l4 -5l4 4"/>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-chart-line"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M4 19l16 0" />
+                      <path d="M4 15l4 -6l4 2l4 -5l4 4" />
                     </svg>
                     <div>
                       <h5 class="font-semibold">Gestão Proativa Real</h5>
-                      <p class="text-sm">Deixe de analisar apenas 2% das chamadas. Revele a causa-raiz das reclamações e oportunidades ocultas.</p>
+                      <p class="text-sm">
+                        Deixe de analisar apenas 2% das chamadas. Revele a
+                        causa-raiz das reclamações e oportunidades ocultas.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -569,20 +632,22 @@
           </div>
 
           <div class="mt-12 text-center">
-            <div class="stats stats-vertical lg:stats-horizontal border-base-300 bg-base-200/50 w-full border shadow">
+            <div
+              class="stats stats-vertical lg:stats-horizontal border-base-300 bg-base-200/50 w-full border shadow"
+            >
               <div class="stat">
                 <div class="stat-title">Redução de Custos</div>
-                <div class="stat-value text-2xl text-primary">70%</div>
+                <div class="stat-value text-primary text-2xl">70%</div>
                 <div class="stat-desc">Operação 24/7 com IA</div>
               </div>
               <div class="stat">
                 <div class="stat-title">Análise Completa</div>
-                <div class="stat-value text-2xl text-secondary">100%</div>
+                <div class="stat-value text-secondary text-2xl">100%</div>
                 <div class="stat-desc">Das interações analisadas</div>
               </div>
               <div class="stat">
                 <div class="stat-title">ROI Médio</div>
-                <div class="stat-value text-2xl text-accent">8x</div>
+                <div class="stat-value text-accent text-2xl">8x</div>
                 <div class="stat-desc">Retorno sobre investimento</div>
               </div>
             </div>
@@ -592,7 +657,7 @@
         <section
           id="depoimentos"
           class="mx-auto w-full max-w-6xl px-4 pt-14 sm:pt-20"
-          data-animate="fade-up"
+          data-animate="scale"
         >
           <div class="space-y-4">
             <h2 class="text-3xl font-bold tracking-tight">
@@ -604,7 +669,10 @@
           </div>
 
           <div class="mt-8 grid gap-4 md:grid-cols-2">
-            <div class="card border-base-200 bg-radial from-primary/5 from-40% to-base-100 border shadow shadow-primary/10">
+            <div
+              class="card border-base-200 from-primary/5 to-base-100 shadow-primary/10 border bg-radial from-40% shadow"
+              data-animate-3d="card"
+            >
               <div class="card-body">
                 <h3 class="card-title">Depoimento</h3>
                 <p class="text-base-content/80">
@@ -623,7 +691,7 @@
                       <img
                         src="/depoimentos/marcio_papa_.webp"
                         alt="Foto de perfil de Márcio Papa - Equipe Mansão da Matuta"
-                        class="w-10 h-10 rounded-full object-cover"
+                        class="h-10 w-10 rounded-full object-cover"
                         loading="lazy"
                         decoding="async"
                         width="40"
@@ -651,7 +719,10 @@
               </div>
             </div>
 
-            <div class="card border-base-200 bg-radial from-primary/5 from-40% to-base-100 border shadow shadow-primary/10">
+            <div
+              class="card border-base-200 from-primary/5 to-base-100 shadow-primary/10 border bg-radial from-40% shadow"
+              data-animate-3d="card"
+            >
               <div class="card-body">
                 <h3 class="card-title">Depoimento</h3>
                 <p class="text-base-content/80">
@@ -667,7 +738,7 @@
                       <img
                         src="/depoimentos/bidutecnica.webp"
                         alt="Foto de perfil da Bidu Técnica - Especialista em manutenção de videogames"
-                        class="w-10 h-10 rounded-full object-cover"
+                        class="h-10 w-10 rounded-full object-cover"
                         loading="lazy"
                         decoding="async"
                         width="40"
@@ -700,6 +771,7 @@
         <section
           id="contato"
           class="mx-auto w-full max-w-6xl px-4 py-14 sm:py-20"
+          data-animate="scale"
         >
           <div class="hero rounded-box border-base-200 bg-base-100 border">
             <div
@@ -723,7 +795,10 @@
                   aria-label="Agendar diagnóstico gratuito via WhatsApp"
                   >Agendar agora</a
                 >
-                <a href="#servicos" class="btn btn-outline" aria-label="Entender nossos serviços de marketing digital"
+                <a
+                  href="#servicos"
+                  class="btn btn-outline"
+                  aria-label="Entender nossos serviços de marketing digital"
                   >Entender serviços</a
                 >
               </div>
@@ -759,9 +834,24 @@
 
             <nav class="space-y-2">
               <h3 class="footer-title">Navegação</h3>
-              <a class="link link-hover" href="#servicos" aria-label="Navegar para seção de serviços">Serviços</a>
-              <a class="link link-hover" href="#sobre" aria-label="Navegar para seção sobre a Apply Brasil">Sobre</a>
-              <a class="link link-hover" href="#contato" aria-label="Navegar para seção de contato">Contato</a>
+              <a
+                class="link link-hover"
+                href="#servicos"
+                aria-label="Navegar para seção de serviços"
+                >Serviços</a
+              >
+              <a
+                class="link link-hover"
+                href="#sobre"
+                aria-label="Navegar para seção sobre a Apply Brasil"
+                >Sobre</a
+              >
+              <a
+                class="link link-hover"
+                href="#contato"
+                aria-label="Navegar para seção de contato"
+                >Contato</a
+              >
             </nav>
 
             <nav class="space-y-4">
@@ -833,8 +923,7 @@
           </div>
 
           <div class="text-base-content/60 mt-10 text-sm">
-            © <span id="year">2026</span> Apply Brasil. Todos os direitos
-            reservados.
+            © 2026 Apply Brasil. Todos os direitos reservados.
           </div>
         </div>
       </footer>
