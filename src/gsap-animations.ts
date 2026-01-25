@@ -1,10 +1,9 @@
 // GSAP Advanced Animations for ApplyBrasil
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import TextPlugin from "gsap/TextPlugin";
 
 // Register plugins
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 // Performance optimizations
 ScrollTrigger.config({
@@ -15,30 +14,6 @@ ScrollTrigger.config({
 
 // Animation configurations
 const animations = {
-  // Hero entrance animation
-  heroEntrance: (element: Element) => {
-    const timeline = gsap.timeline();
-
-    // Content stagger
-    const contentItems = element.querySelectorAll("[data-animate-item]");
-    timeline.fromTo(
-      contentItems,
-      { opacity: 0, y: 30, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: "power2.out",
-        stagger: 0.15,
-        clearProps: "transform,opacity",
-      },
-      "-=0.6",
-    );
-
-    return timeline;
-  },
-
   // 3D Card hover effect
   card3D: (element: Element) => {
     const card = element as HTMLElement;
@@ -90,12 +65,6 @@ export function initAnimations(): void {
 
   if (prefersReducedMotion) return;
 
-  // Hero entrance
-  const heroSection = document.querySelector('[data-animate="hero-entrance"]');
-  if (heroSection) {
-    animations.heroEntrance(heroSection);
-  }
-
   // 3D Cards
   const cards3D = document.querySelectorAll('[data-animate-3d="card"]');
   if (cards3D.length > 0) {
@@ -107,13 +76,12 @@ export function initAnimations(): void {
     });
   }
 
-  // Legacy animations (data-animate, data-animate-group, data-animate-item)
+  // Legacy animations (data-animate, data-animate-item)
   const legacyElements = document.querySelectorAll("[data-animate]");
-  const legacyGroups = document.querySelectorAll("[data-animate-group]");
 
-  if (legacyElements.length > 0 || legacyGroups.length > 0) {
+  if (legacyElements.length > 0) {
     console.log(
-      `🎬 GSAP: Found ${legacyElements.length} legacy elements and ${legacyGroups.length} legacy groups`,
+      `🎬 GSAP: Found ${legacyElements.length} legacy elements`,
     );
 
     // Process individual elements
@@ -148,32 +116,6 @@ export function initAnimations(): void {
       }
 
       gsap.fromTo(el, { opacity: 0, y: 18 }, { opacity: 1, y: 0, ...base });
-    });
-
-    // Process groups with stagger
-    legacyGroups.forEach((group) => {
-      const items = Array.from(group.querySelectorAll("[data-animate-item]"));
-      if (items.length > 0) {
-        gsap.fromTo(
-          items,
-          { opacity: 0, y: 14 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.5,
-            ease: "power2.out",
-            stagger: 0.06,
-            clearProps: "transform,opacity",
-            scrollTrigger: {
-              trigger: group,
-              start: "top 85%",
-              toggleActions: "play none none none",
-              once: true,
-              scrub: false,
-            },
-          },
-        );
-      }
     });
   }
 }

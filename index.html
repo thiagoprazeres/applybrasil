@@ -177,7 +177,7 @@
                   d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
                 />
               </svg>
-              <span class="hidden sm:inline">Agendar diagnóstico</span>
+              Agendar <span class="hidden sm:inline">diagnóstico</span>
             </a>
           </div>
         </div>
@@ -204,7 +204,7 @@
         <section
           id="hero"
           class="relative mx-auto w-full max-w-6xl overflow-hidden px-4 pt-12 sm:pt-16"
-          data-animate="hero-entrance"
+          data-animate="fade-up"
         >
           <div class="grid items-center gap-10 md:grid-cols-2">
             <div class="space-y-6">
@@ -928,7 +928,6 @@
         </div>
       </footer>
     </div>
-    <!-- Defer non-critical JavaScript -->
-    <script type="module" defer src="/src/main.ts"></script>
+    <script type="module" defer blocking="render" src="/src/main.ts"></script>
   </body>
 </html>
