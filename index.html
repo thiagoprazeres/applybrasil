@@ -125,6 +125,60 @@
         --depth: 1;
         --noise: 0;
       }
+
+      @keyframes clientes-scroll {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        to {
+          transform: translate3d(-50%, 0, 0);
+        }
+      }
+
+      .clientes-marquee {
+        position: relative;
+        overflow: hidden;
+        mask-image: linear-gradient(
+          to right,
+          transparent 0,
+          black 10%,
+          black 90%,
+          transparent 100%
+        );
+      }
+
+      .clientes-track {
+        display: flex;
+        align-items: center;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        width: max-content;
+        animation: clientes-scroll 28s linear infinite;
+      }
+
+      .cliente-logo-item {
+        flex: 0 0 auto;
+        width: clamp(7rem, 14vw, 10rem);
+        height: clamp(3.25rem, 7vw, 4.25rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cliente-logo {
+        max-width: 100%;
+        max-height: 2.9rem;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        filter: brightness(0) saturate(100%) invert(1);
+        opacity: 0.9;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .clientes-track {
+          animation: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -389,6 +443,244 @@
               <div class="stat-title">Flexibilidade</div>
               <div class="stat-value text-xl">Nuvem</div>
               <div class="stat-desc">Disponibilidade e computação avançada</div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="clientes"
+          class="mx-auto w-full max-w-6xl px-4 pt-10 sm:pt-14"
+          data-animate="fade"
+        >
+          <div class="space-y-4 text-center">
+            <h2 class="text-3xl font-bold tracking-tight">
+              Empresas que confiam na Apply Brasil
+            </h2>
+          </div>
+
+          <div class="border-base-300 bg-base-200/40 mt-6 rounded-box border px-2 py-6 sm:px-4 sm:py-8">
+            <div class="clientes-marquee">
+              <ul class="clientes-track">
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/alcaengenhariape.png"
+                    alt="Logo da Alca Engenharia"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="432"
+                    height="132"
+                  />
+                </li>
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/alliance.png"
+                    alt="Logo da Alliance"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="628"
+                    height="197"
+                  />
+                </li>
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/andrademarinholmf.png"
+                    alt="Logo da Andrade Marinho"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="102"
+                    height="48"
+                  />
+                </li>
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/cyrela.png"
+                    alt="Logo da Cyrela"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="217"
+                    height="67"
+                  />
+                </li>
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/disnove.png"
+                    alt="Logo da Disnove"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="145"
+                    height="45"
+                  />
+                </li>
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/dot7.png"
+                    alt="Logo da Dot7"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="727"
+                    height="912"
+                  />
+                </li>
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/mouradubeux.svg"
+                    alt="Logo da Moura Dubeux"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="260"
+                    height="148"
+                  />
+                </li>
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/re9pneus.png"
+                    alt="Logo da Re9 Pneus"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="340"
+                    height="126"
+                  />
+                </li>
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/santacasacg.png"
+                    alt="Logo da Santa Casa"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="773"
+                    height="347"
+                  />
+                </li>
+                <li class="cliente-logo-item">
+                  <img
+                    src="/clientes/sebrae.svg"
+                    alt="Logo do Sebrae"
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="69"
+                    height="36"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/alcaengenhariape.png"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="432"
+                    height="132"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/alliance.png"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="628"
+                    height="197"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/andrademarinholmf.png"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="102"
+                    height="48"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/cyrela.png"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="217"
+                    height="67"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/disnove.png"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="145"
+                    height="45"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/dot7.png"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="727"
+                    height="912"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/mouradubeux.svg"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="260"
+                    height="148"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/re9pneus.png"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="340"
+                    height="126"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/santacasacg.png"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="773"
+                    height="347"
+                  />
+                </li>
+                <li class="cliente-logo-item" aria-hidden="true">
+                  <img
+                    src="/clientes/sebrae.svg"
+                    alt=""
+                    class="cliente-logo"
+                    loading="lazy"
+                    decoding="async"
+                    width="69"
+                    height="36"
+                  />
+                </li>
+              </ul>
             </div>
           </div>
         </section>
